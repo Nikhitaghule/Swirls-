@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Inter:wght@400;600;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ... keep your existing body styles ... */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* This forces the transition on the whole body 
+   and handles the background color globally 
+*/
+body {
+  @apply bg-gray-50 text-gray-900 transition-colors duration-300;
+}
+
+/* When the 'dark' class is present on HTML, apply these styles */
+.dark body {
+  @apply bg-[#0f1115] text-white;
+}
+
+/* Scrollbar Styling (Bonus) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+::-webkit-scrollbar-thumb {
+  background: #FF5E1E; 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e04f1a; 
+}
+
+/* Glass Effect Utilities */
+.glass-panel {
+  @apply bg-white/10 backdrop-blur-md border border-white/10 shadow-xl;
+}
+
+.dark .glass-panel {
+  @apply bg-black/40 border-white/5;
+}
